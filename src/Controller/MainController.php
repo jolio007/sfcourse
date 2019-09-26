@@ -14,7 +14,7 @@ class MainController extends AbstractController
      */
     public function index()
     {
-        return new Response(`<h1>Welcome FreeCodeCamp</h1>`); 
+        return $this->render('home/index.html.twig');
     }
 
     /**
@@ -23,7 +23,10 @@ class MainController extends AbstractController
      *@return Response
      */
     public function custom(Request $request){
-        
+        $name = $request->get('name');
+        return $this->render('home/custom.html.twig',[
+            'name' => $name
+        ]);
         
     }
 }
