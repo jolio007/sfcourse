@@ -25,7 +25,6 @@ class Post
 
     /**
      * @ORM\Column(type="string",length=100)
-     * 
      */
     private $image;
 
